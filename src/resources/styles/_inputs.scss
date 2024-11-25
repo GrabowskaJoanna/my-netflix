@@ -1,0 +1,36 @@
+.input-wrapper {
+	position: relative;
+	margin-bottom: 40px;
+	.input {
+		width: 340px;
+		height: 38px;
+		padding: 10px;
+		border-radius: 6px;
+		background-color: rgba(29, 29, 29, 0.726);
+		border: 1px solid rgba(196, 196, 196, 0.788);
+		color: white;
+
+		&:focus + label,
+		&:not(:placeholder-shown) + label {
+			visibility: visible;
+			opacity: 1;
+			transform: translateY(-18px);
+			font-size: 14px;
+			color: #aaa;
+		}
+
+		&::placeholder {
+			color: transparent;
+		}
+	}
+
+	label {
+		position: absolute;
+		left: 20px;
+		top: 22px;
+		font-size: 16px;
+		color: #aaa;
+		pointer-events: none;
+		transition: opacity 0.2s ease, transform 0.2s ease;
+	}
+}
