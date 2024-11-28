@@ -1,9 +1,10 @@
 import React from "react";
 import SeriesAndPrograms from "../pages/SeriesAndPrograms";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
 	return (
-		<div className='nav-bar'>
+		<div className='nav_bar'>
 			<svg
 				xmlns='http://www.w3.org/2000/svg'
 				height='80px'
@@ -16,7 +17,15 @@ const NavBar = () => {
 				/>
 			</svg>
 			<nav className='nav_links'>
-				<NavLink to></NavLink>
+				<NavLink to='/' className='nav_link'>
+					Homepage
+				</NavLink>
+				<NavLink to='/series-and-programs' className='nav_link'>
+					Series and Programs
+				</NavLink>
+				<NavLink to='/movies' className='nav_link'>
+					Movies
+				</NavLink>
 			</nav>
 		</div>
 	);
